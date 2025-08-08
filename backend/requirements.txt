@@ -1,0 +1,8 @@
+fastapi
+uvicron[standard]
+pydantic
+python-multipart
+sqlalchemy
+openai
+whisper
+ffmpeg-python
