@@ -84,3 +84,16 @@ cp .env.example .env
 
 # 開発サーバー起動
 npm run dev
+
+## 📦 バックエンド動作環境
+
+- Python 3.11 以上
+- FastAPI 0.115.13
+- Uvicorn 0.34.3
+- Pydantic 2.11.7 / Pydantic Settings 2.10.0
+- SQLAlchemy 2.0.41
+- OpenAI SDK 1.90.0
+- OpenAI Whisper 20240930
+- python-dotenv 1.1.0
+- torch 2.7.1 (CPU版)
+- torchaudio 2.7.1+cpu
