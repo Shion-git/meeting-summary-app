@@ -3,10 +3,22 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
+
+# env / secrets
 .env
 *.env
+
+# virtual env
 venv/
 venv311/
+
+# DB / ローカル生成物
+*.db
+*.sqlite*
+backend/app.db
+
+# アップロード保存先（公開しない）
+backend/app/uploads/
 
 # ==== Node / TypeScript / Vue ====
 node_modules/
