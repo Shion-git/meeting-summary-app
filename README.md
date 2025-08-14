@@ -71,39 +71,45 @@ meeting-summary-app/
 
 
 ## 🚀 セットアップ手順
-1. リポジトリのクローン
+### 1. リポジトリのクローン
+```
 git clone https://github.com/あなたのユーザー名/meeting-summary-app.git
 cd meeting-summary-app
+```
 
-2. バックエンドのセットアップ
+### 2. バックエンドのセットアップ
+```
 cd backend
 python -m venv venv
 source venv/bin/activate   # Windowsは venv\Scripts\activate
 pip install -r requirements.txt
 cp .env # 環境変数を設定
 uvicorn app.main:app --reload
+```
 
 ※デフォルトで http://localhost:8000 で起動します。
 
-3. フロントエンドのセットアップ
+### 3. フロントエンドのセットアップ
+```
 cd frontend
 npm install
 cp .env # API接続先を設定
 npm run dev
+```
 
 ※デフォルトで http://localhost:5173 で起動します。
 
 ## 🧩 主な機能
-・会議音声ファイルのアップロード
-・OpenAI Whisper による音声文字起こし
-・GPT による要約生成
-・感情分析
-・アクションアイテム抽出
-・会議履歴の保存・閲覧
+- 会議音声ファイルのアップロード
+- OpenAI Whisper による音声文字起こし
+- GPT による要約生成
+- 感情分析
+- アクションアイテム抽出
+- 会議履歴の保存・閲覧
 
 ## 📜 ライセンス
 このプロジェクトはポートフォリオ用であり、商用利用は想定していません。
 
 ## 💡 注意
-・.env ファイルは 必ず .gitignore に追加 してください。
-・APIキーや個人情報はコミットしないようにしてください。
+- .env ファイルは 必ず .gitignore に追加 してください。
+- APIキーや個人情報はコミットしないようにしてください。
