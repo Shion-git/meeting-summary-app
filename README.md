@@ -59,15 +59,15 @@ meeting-summary-app/
 セキュリティのため、実際のキーは **絶対に公開しない** でください。
 
 ### バックエンド (`backend/.env.example`)
-```env
-OPENAI_API_KEY=your_openai_api_key_here
-DATABASE_URL=sqlite:///./app.db
+.env
+- OPENAI_API_KEY=your_openai_api_key_here
+- DATABASE_URL=sqlite:///./app.db
 
 ### フロントエンド 
-VITE_API_BASE_URL=http://localhost:8000
+- VITE_API_BASE_URL=http://localhost:8000
 
 
-🚀 セットアップ手順
+## 🚀 セットアップ手順
 1. リポジトリのクローン
 git clone https://github.com/あなたのユーザー名/meeting-summary-app.git
 cd meeting-summary-app
@@ -80,7 +80,7 @@ pip install -r requirements.txt
 cp .env.example .env       # 環境変数を設定
 uvicorn app.main:app --reload
 
-デフォルトで http://localhost:8000 で起動します。
+※デフォルトで http://localhost:8000 で起動します。
 
 3. フロントエンドのセットアップ
 cd frontend
@@ -88,9 +88,9 @@ npm install
 cp .env.example .env       # API接続先を設定
 npm run dev
 
-デフォルトで http://localhost:5173 で起動します。
+※デフォルトで http://localhost:5173 で起動します。
 
-🧩 主な機能
+## 🧩 主な機能
 ・会議音声ファイルのアップロード
 ・OpenAI Whisper による音声文字起こし
 ・GPT による要約生成
@@ -98,9 +98,9 @@ npm run dev
 ・アクションアイテム抽出
 ・会議履歴の保存・閲覧
 
-📜 ライセンス
+## 📜 ライセンス
 このプロジェクトはポートフォリオ用であり、商用利用は想定していません。
 
-💡 注意
+## 💡 注意
 ・.env ファイルは 必ず .gitignore に追加 してください。
 ・APIキーや個人情報はコミットしないようにしてください。
