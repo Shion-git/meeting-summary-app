@@ -58,12 +58,13 @@ meeting-summary-app/
 本アプリは `.env` ファイルで API キーや接続設定を管理しています。  
 セキュリティのため、実際のキーは **絶対に公開しない** でください。
 
-### バックエンド (`backend/.env.example`)
+### バックエンド (`backend/.env`)
 .env
 - OPENAI_API_KEY=your_openai_api_key_here
 - DATABASE_URL=sqlite:///./app.db
 
-### フロントエンド 
+### フロントエンド (`frontend/.env`)
+.env
 - VITE_API_BASE_URL=http://localhost:8000
 
 
@@ -77,7 +78,7 @@ cd backend
 python -m venv venv
 source venv/bin/activate   # Windowsは venv\Scripts\activate
 pip install -r requirements.txt
-cp .env.example .env       # 環境変数を設定
+cp .env # 環境変数を設定
 uvicorn app.main:app --reload
 
 ※デフォルトで http://localhost:8000 で起動します。
@@ -85,7 +86,7 @@ uvicorn app.main:app --reload
 3. フロントエンドのセットアップ
 cd frontend
 npm install
-cp .env.example .env       # API接続先を設定
+cp .env # API接続先を設定
 npm run dev
 
 ※デフォルトで http://localhost:5173 で起動します。
