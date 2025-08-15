@@ -80,24 +80,38 @@ cd meeting-summary-app
 ### 2. バックエンドのセットアップ
 ```
 cd backend
+
+# 仮想環境
+# Windows
 python -m venv venv
-source venv/bin/activate   # Windowsは venv\Scripts\activate
+venv\Scripts\activate
+
+# 依存インストール
 pip install -r requirements.txt
-cp .env # 環境変数を設定
+
+# .env作成
+copy .env
+
+# ffmpeg が必要（未導入の場合）
+# Windows: https://www.gyan.dev/ffmpeg/builds/ から zip をDL → PATHに追加
+
+# サーバ起動（デフォルト: http://localhost:8000）
 uvicorn app.main:app --reload
 ```
-
-※デフォルトで http://localhost:8000 で起動します。
 
 ### 3. フロントエンドのセットアップ
 ```
 cd frontend
+
+# 依存インストール
 npm install
-cp .env # API接続先を設定
+
+# .env 作成
+copy .env
+
+# 開発起動（デフォルト: http://localhost:5173）
 npm run dev
 ```
-
-※デフォルトで http://localhost:5173 で起動します。
 
 ## 🧩 主な機能
 - 会議音声ファイルのアップロード
