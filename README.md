@@ -17,9 +17,11 @@
 
 ## 🧠 設計・実装のポイント
 
+- API 通信処理を専用の層に分離し、UI から API 実装の詳細を隠蔽することで保守性を意識
 - バックエンドは FastAPI を採用し、API 単位で責務を分離
 - OpenAI / Whisper 処理は service 層に切り出し、再利用性を意識
 - フロントエンドは API との疎結合を意識し、レスポンス形式を統一
+- API レスポンスはフロント側で扱いやすいよう、共通フォーマットに統一
 - エラー時もユーザーに状態が分かるよう UI 制御を実装
 
 ---
@@ -109,7 +111,7 @@ venv\Scripts\activate
 pip install -r requirements.txt
 
 # .env作成
-copy .env
+copy .env.example .env
 
 # ffmpeg が必要（未導入の場合）
 # Windows: https://www.gyan.dev/ffmpeg/builds/ から zip をDL → PATHに追加
@@ -126,7 +128,7 @@ cd frontend
 npm install
 
 # .env 作成
-copy .env
+copy .env.example .env
 
 # 開発起動（デフォルト: http://localhost:5173）
 npm run dev
